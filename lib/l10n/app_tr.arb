@@ -1,0 +1,47 @@
+{
+  "@@locale": "tr",
+
+  "appTitle": "MultiLangBloc",
+  "homeTitle": "MultiLangBloc",
+  "brandName": "MultiLangBloc",
+  "appSubtitle": "MultiLangBloc - Bloc kullanarak çok dilli uygulama örneği",
+
+  "login": "Giriş",
+  "register": "Kayıt",
+  "emailLabel": "E-posta",
+  "passwordLabel": "Şifre",
+  "confirmPasswordLabel": "Şifreyi Onayla",
+  "nameOptionalLabel": "Ad (isteğe bağlı)",
+
+  "emailRequired": "Lütfen e-posta adresinizi girin",
+  "emailInvalid": "Lütfen geçerli bir e-posta girin",
+  "passwordRequired": "Lütfen şifrenizi girin",
+  "enterPassword": "Lütfen bir şifre girin",
+  "passwordTooShort": "Şifre en az 8 karakter olmalıdır",
+  "passwordsDoNotMatch": "Şifreler eşleşmiyor",
+
+  "noAccountRegister": "Hesabınız yok mu? Kayıt olun",
+  "hasAccountLogin": "Zaten hesabınız var mı? Giriş yapın",
+  "loginSlashRegister": "Giriş / Kayıt",
+
+  "error": "Hata",
+  "retry": "Tekrar Dene",
+  "ok": "Tamam",
+
+  "noInternetConnection": "İnternet bağlantısı yok",
+  "cacheError": "Önbellek hatası",
+  "authenticationFailed": "Kimlik doğrulama başarısız",
+
+  "free": "Ücretsiz",
+
+  "settings": "Ayarlar",
+  "language": "Dil",
+  "systemDefault": "Sistem Varsayılanı",
+  "english": "English",
+  "persian": "فارسی",
+  "turkish": "Türkçe",
+  "arabic": "العربية",
+
+  "developmentMode": "Geliştirme Modu",
+  "cancel": "İptal"
+}

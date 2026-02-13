@@ -1,0 +1,108 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "MultiLangBloc",
+  "@appTitle": { "description": "The application title" },
+
+  "homeTitle": "MultiLangBloc",
+  "@homeTitle": { "description": "Title shown in the home page app bar" },
+
+  "brandName": "MultiLangBloc",
+  "@brandName": { "description": "Brand name displayed as logo text (English)" },
+
+  "appSubtitle": "Multi-language app with Bloc",
+  "@appSubtitle": { "description": "Subtitle on the home page" },
+
+  "login": "Login",
+  "@login": { "description": "Login button and page title" },
+
+  "register": "Register",
+  "@register": { "description": "Register button and page title" },
+
+  "emailLabel": "Email",
+  "@emailLabel": { "description": "Label for email input field" },
+
+  "passwordLabel": "Password",
+  "@passwordLabel": { "description": "Label for password input field" },
+
+  "confirmPasswordLabel": "Confirm Password",
+  "@confirmPasswordLabel": { "description": "Label for confirm password field" },
+
+  "nameOptionalLabel": "Name (optional)",
+  "@nameOptionalLabel": { "description": "Label for optional name field" },
+
+  "emailRequired": "Please enter your email",
+  "@emailRequired": { "description": "Validation error when email is empty" },
+
+  "emailInvalid": "Please enter a valid email",
+  "@emailInvalid": { "description": "Validation error when email format is wrong" },
+
+  "passwordRequired": "Please enter your password",
+  "@passwordRequired": { "description": "Validation error when password is empty on login" },
+
+  "enterPassword": "Please enter a password",
+  "@enterPassword": { "description": "Validation error when password is empty on register" },
+
+  "passwordTooShort": "Password must be at least 8 characters",
+  "@passwordTooShort": { "description": "Validation error when password is too short" },
+
+  "passwordsDoNotMatch": "Passwords do not match",
+  "@passwordsDoNotMatch": { "description": "Validation error when passwords differ" },
+
+  "noAccountRegister": "Don't have an account? Register",
+  "@noAccountRegister": { "description": "Link text to navigate to register page" },
+
+  "hasAccountLogin": "Already have an account? Login",
+  "@hasAccountLogin": { "description": "Link text to navigate to login page" },
+
+  "loginSlashRegister": "Login / Register",
+  "@loginSlashRegister": { "description": "Link to login or register" },
+
+  "error": "Error",
+  "@error": { "description": "Default error dialog title" },
+
+  "retry": "Retry",
+  "@retry": { "description": "Retry button text" },
+
+  "ok": "OK",
+  "@ok": { "description": "OK button text" },
+
+  "noInternetConnection": "No internet connection",
+  "@noInternetConnection": { "description": "Error message for network failures" },
+
+  "cacheError": "Cache error",
+  "@cacheError": { "description": "Error message for cache failures" },
+
+  "authenticationFailed": "Authentication failed",
+  "@authenticationFailed": { "description": "Error message for auth failures" },
+
+  "free": "Free",
+  "@free": { "description": "Label for free pricing tier" },
+
+  "settings": "Settings",
+  "@settings": { "description": "Settings page title" },
+
+  "language": "Language",
+  "@language": { "description": "Language section header in settings" },
+
+  "systemDefault": "System Default",
+  "@systemDefault": { "description": "Option to follow device locale" },
+
+  "english": "English",
+  "@english": { "description": "English language option" },
+
+  "persian": "فارسی",
+  "@persian": { "description": "Persian language option" },
+
+  "turkish": "Türkçe",
+  "@turkish": { "description": "Turkish language option" },
+
+  "arabic": "العربية",
+  "@arabic": { "description": "Arabic language option" },
+  
+  "developmentMode": "Development Mode",
+  "@developmentMode": { "description": "Banner for mock/dev mode" },
+
+  "cancel": "Cancel",
+  "@cancel": { "description": "Cancel button text" }
+}

@@ -1,0 +1,47 @@
+{
+  "@@locale": "fa",
+
+  "appTitle": "چند زبانه با بلاک",
+  "homeTitle": "چند زبانه با بلاک",
+  "brandName": "چند زبانه با بلاک",
+  "appSubtitle": "چند زبانه با بلاک - نمونه برنامه چند زبانه با استفاده از Bloc",
+
+  "login": "ورود",
+  "register": "ثبت‌نام",
+  "emailLabel": "ایمیل",
+  "passwordLabel": "رمز عبور",
+  "confirmPasswordLabel": "تکرار رمز عبور",
+  "nameOptionalLabel": "نام (اختیاری)",
+
+  "emailRequired": "لطفاً ایمیل خود را وارد کنید",
+  "emailInvalid": "لطفاً یک ایمیل معتبر وارد کنید",
+  "passwordRequired": "لطفاً رمز عبور خود را وارد کنید",
+  "enterPassword": "لطفاً یک رمز عبور وارد کنید",
+  "passwordTooShort": "رمز عبور باید حداقل ۸ کاراکتر باشد",
+  "passwordsDoNotMatch": "رمزهای عبور مطابقت ندارند",
+
+  "noAccountRegister": "حساب کاربری ندارید؟ ثبت‌نام کنید",
+  "hasAccountLogin": "قبلاً حساب دارید؟ وارد شوید",
+  "loginSlashRegister": "ورود / ثبت‌نام",
+
+  "error": "خطا",
+  "retry": "تلاش مجدد",
+  "ok": "تأیید",
+
+  "noInternetConnection": "اتصال اینترنت برقرار نیست",
+  "cacheError": "خطای حافظه پنهان",
+  "authenticationFailed": "احراز هویت ناموفق بود",
+
+  "free": "رایگان",
+
+  "settings": "تنظیمات",
+  "language": "زبان",
+  "systemDefault": "پیش‌فرض سیستم",
+  "english": "English",
+  "persian": "فارسی",
+  "turkish": "Türkçe",
+  "arabic": "العربية",
+
+  "developmentMode": "حالت توسعه",
+  "cancel": "لغو"
+}

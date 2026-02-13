@@ -1,0 +1,47 @@
+{
+  "@@locale": "ar",
+
+  "appTitle": "تعدد اللغات بلوك",
+  "homeTitle": "تعدد اللغات بلوك",
+  "brandName": "تعدد اللغات بلوك",
+  "appSubtitle": "التعرف على النوتات الموسيقية الفارسية",
+
+  "login": "تسجيل الدخول",
+  "register": "إنشاء حساب",
+  "emailLabel": "البريد الإلكتروني",
+  "passwordLabel": "كلمة المرور",
+  "confirmPasswordLabel": "تأكيد كلمة المرور",
+  "nameOptionalLabel": "الاسم (اختياري)",
+
+  "emailRequired": "يرجى إدخال بريدك الإلكتروني",
+  "emailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+  "passwordRequired": "يرجى إدخال كلمة المرور",
+  "enterPassword": "يرجى إدخال كلمة مرور",
+  "passwordTooShort": "يجب أن تكون كلمة المرور ٨ أحرف على الأقل",
+  "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين",
+
+  "noAccountRegister": "ليس لديك حساب؟ سجّل الآن",
+  "hasAccountLogin": "لديك حساب بالفعل؟ سجّل الدخول",
+  "loginSlashRegister": "دخول / تسجيل",
+
+  "error": "خطأ",
+  "retry": "إعادة المحاولة",
+  "ok": "حسناً",
+
+  "noInternetConnection": "لا يوجد اتصال بالإنترنت",
+  "cacheError": "خطأ في التخزين المؤقت",
+  "authenticationFailed": "فشل التحقق من الهوية",
+
+  "free": "مجاني",
+
+  "settings": "الإعدادات",
+  "language": "اللغة",
+  "systemDefault": "افتراضي النظام",
+  "english": "English",
+    "persian": "الفارسية",
+  "turkish": "Türkçe",
+  "arabic": "العربية",
+
+  "developmentMode": "وضع التطوير",
+  "cancel": "إلغاء"
+}
