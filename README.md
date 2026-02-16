@@ -12,6 +12,41 @@ Run the app:
 
 - `flutter run`
 
+## Quick start backend
+
+The Go backend is in `/backend`. Start it with Docker:
+
+```bash
+cd backend
+docker compose up -d
+```
+
+This starts:
+
+- **PostgreSQL** on port 5432
+- **Auth Service** on port 8081
+- **Gateway** on port 8080
+
+Test the API:
+
+```bash
+curl http://localhost:8080/health
+```
+
+Run the full test suite:
+
+```bash
+./test_api.sh
+```
+
+Stop the backend:
+
+```bash
+docker compose down
+```
+
+More details: [backend/README.md](backend/README.md)
+
 ## Project structure (high level)
 
 - `lib/app/` app wiring (DI, routing, root widget)
