@@ -128,7 +128,12 @@ class _LoginPageState extends State<LoginPage> {
                       const SizedBox(height: 16),
                       TextButton(
                         onPressed: () {
-                          context.pushRoute(const RegisterRoute());
+                          final email = _emailController.text.trim();
+                          context.pushRoute(
+                            RegisterRoute(
+                              initialEmail: email.isEmpty ? null : email,
+                            ),
+                          );
                         },
                         child: Text(l10n.noAccountRegister),
                       ),

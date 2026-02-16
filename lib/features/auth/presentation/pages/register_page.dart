@@ -10,7 +10,9 @@ import '../bloc/auth_bloc.dart';
 
 @RoutePage()
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+  final String? initialEmail;
+
+  const RegisterPage({super.key, this.initialEmail});
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
@@ -23,6 +25,14 @@ class _RegisterPageState extends State<RegisterPage> {
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
   bool _obscurePassword = true;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.initialEmail case final email?) {
+      _emailController.text = email;
+    }
+  }
 
   @override
   void dispose() {

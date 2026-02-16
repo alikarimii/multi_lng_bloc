@@ -44,18 +44,48 @@ class LoginRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [RegisterPage]
-class RegisterRoute extends PageRouteInfo<void> {
-  const RegisterRoute({List<PageRouteInfo>? children})
-    : super(RegisterRoute.name, initialChildren: children);
+class RegisterRoute extends PageRouteInfo<RegisterRouteArgs> {
+  RegisterRoute({Key? key, String? initialEmail, List<PageRouteInfo>? children})
+    : super(
+        RegisterRoute.name,
+        args: RegisterRouteArgs(key: key, initialEmail: initialEmail),
+        initialChildren: children,
+      );
 
   static const String name = 'RegisterRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const RegisterPage();
+      final args = data.argsAs<RegisterRouteArgs>(
+        orElse: () => const RegisterRouteArgs(),
+      );
+      return RegisterPage(key: args.key, initialEmail: args.initialEmail);
     },
   );
+}
+
+class RegisterRouteArgs {
+  const RegisterRouteArgs({this.key, this.initialEmail});
+
+  final Key? key;
+
+  final String? initialEmail;
+
+  @override
+  String toString() {
+    return 'RegisterRouteArgs{key: $key, initialEmail: $initialEmail}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! RegisterRouteArgs) return false;
+    return key == other.key && initialEmail == other.initialEmail;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ initialEmail.hashCode;
 }
 
 /// generated route for
