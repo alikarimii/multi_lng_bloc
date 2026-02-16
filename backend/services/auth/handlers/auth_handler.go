@@ -190,6 +190,65 @@ func (h *AuthHandler) GetProfile(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
+func (h *AuthHandler) ListUsers(w http.ResponseWriter, r *http.Request) {
+	userID := getUserIDFromToken(r)
+	if userID == "" {
+		respondJSON(w, http.StatusUnauthorized, map[string]string{"error": "Unauthorized"})
+		return
+	}
+
+	users, err := h.authService.ListUsers()
+	if err != nil {
+		respondJSON(w, http.StatusInternalServerError, map[string]string{"error": "Failed to list users"})
+		return
+	}
+
+	response := make([]map[string]string, 0, len(users))
+	for _, user := range users {
+		response = append(response, map[string]string{
+			"id":         user.ID,
+			"email":      user.Email,
+			"name":       user.Name,
+			"created_at": user.CreatedAt.Format("2006-01-02T15:04:05Z"),
+			"updated_at": user.UpdatedAt.Format("2006-01-02T15:04:05Z"),
+		})
+	}
+
+	respondJSON(w, http.StatusOK, response)
+}
+
+func (h *AuthHandler) GetUserByID(w http.ResponseWriter, r *http.Request) {
+	userID := getUserIDFromToken(r)
+	if userID == "" {
+		respondJSON(w, http.StatusUnauthorized, map[string]string{"error": "Unauthorized"})
+		return
+	}
+
+	id := r.PathValue("id")
+	if id == "" {
+		respondJSON(w, http.StatusBadRequest, map[string]string{"error": "User id is required"})
+		return
+	}
+
+	user, err := h.authService.GetUserByID(id)
+	if err != nil {
+		if err == repository.ErrUserNotFound {
+			respondJSON(w, http.StatusNotFound, map[string]string{"error": "User not found"})
+			return
+		}
+		respondJSON(w, http.StatusInternalServerError, map[string]string{"error": "Failed to get user"})
+		return
+	}
+
+	respondJSON(w, http.StatusOK, map[string]interface{}{
+		"id":         user.ID,
+		"email":      user.Email,
+		"name":       user.Name,
+		"created_at": user.CreatedAt.Format("2006-01-02T15:04:05Z"),
+		"updated_at": user.UpdatedAt.Format("2006-01-02T15:04:05Z"),
+	})
+}
+
 func (h *AuthHandler) UpdateProfile(w http.ResponseWriter, r *http.Request) {
 	userID := getUserIDFromToken(r)
 	if userID == "" {

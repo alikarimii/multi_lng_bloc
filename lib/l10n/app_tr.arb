@@ -43,5 +43,12 @@
   "arabic": "العربية",
 
   "developmentMode": "Geliştirme Modu",
-  "cancel": "İptal"
+  "cancel": "İptal",
+
+  "profileTitleMy": "Profilim",
+  "profileTitle": "Profil",
+  "usersTitle": "Kullanicilar",
+  "unnamedUser": "Isimsiz Kullanici",
+  "joinedOn": "Katilim: {date}",
+  "noUsersFound": "Kullanici bulunamadi"
 }

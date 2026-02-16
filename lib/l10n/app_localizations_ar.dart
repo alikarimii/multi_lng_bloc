@@ -90,6 +90,26 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settings => 'الإعدادات';
 
   @override
+  String get profileTitleMy => 'ملفي الشخصي';
+
+  @override
+  String get profileTitle => 'الملف الشخصي';
+
+  @override
+  String get usersTitle => 'المستخدمون';
+
+  @override
+  String get unnamedUser => 'مستخدم بدون اسم';
+
+  @override
+  String joinedOn(String date) {
+    return 'انضم: $date';
+  }
+
+  @override
+  String get noUsersFound => 'لا يوجد مستخدمون';
+
+  @override
   String get language => 'اللغة';
 
   @override

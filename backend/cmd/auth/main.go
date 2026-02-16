@@ -77,6 +77,8 @@ func main() {
 	mux.HandleFunc("GET /api/v1/user/profile", authHandler.GetProfile)
 	mux.HandleFunc("PUT /api/v1/user/profile", authHandler.UpdateProfile)
 	mux.HandleFunc("GET /api/v1/user/usage", authHandler.GetUsage)
+	mux.HandleFunc("GET /api/v1/users", authHandler.ListUsers)
+	mux.HandleFunc("GET /api/v1/users/{id}", authHandler.GetUserByID)
 
 	// Create HTTP server
 	server := &http.Server{

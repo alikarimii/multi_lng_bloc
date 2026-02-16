@@ -31,6 +31,8 @@ func New(
 	mux.Handle("GET /api/v1/user/profile", authMW.RequireAuth(serviceProxy.AuthProxy()))
 	mux.Handle("PUT /api/v1/user/profile", authMW.RequireAuth(serviceProxy.AuthProxy()))
 	mux.Handle("GET /api/v1/user/usage", authMW.RequireAuth(serviceProxy.AuthProxy()))
+	mux.Handle("GET /api/v1/users", authMW.RequireAuth(serviceProxy.AuthProxy()))
+	mux.Handle("GET /api/v1/users/{id}", authMW.RequireAuth(serviceProxy.AuthProxy()))
 	mux.Handle("DELETE /api/v1/auth/account", authMW.RequireAuth(serviceProxy.AuthProxy()))
 
 	// Apply global middleware

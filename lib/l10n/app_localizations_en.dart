@@ -90,6 +90,26 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
+  String get profileTitleMy => 'My Profile';
+
+  @override
+  String get profileTitle => 'Profile';
+
+  @override
+  String get usersTitle => 'Users';
+
+  @override
+  String get unnamedUser => 'Unnamed User';
+
+  @override
+  String joinedOn(String date) {
+    return 'Joined: $date';
+  }
+
+  @override
+  String get noUsersFound => 'No users found';
+
+  @override
   String get language => 'Language';
 
   @override

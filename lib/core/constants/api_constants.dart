@@ -17,6 +17,8 @@ class ApiConstants {
   // User
   static const String userProfile = '$apiVersion/user/profile';
   static const String userUsage = '$apiVersion/user/usage';
+  static const String users = '$apiVersion/users';
+  static String userById(String id) => '$apiVersion/users/$id';
 
   // Timeouts
   static const Duration connectTimeout = Duration(seconds: 15);

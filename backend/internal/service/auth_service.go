@@ -128,6 +128,10 @@ func (s *AuthService) GetUserByID(userID string) (*models.User, error) {
 	return s.userRepo.GetByID(userID)
 }
 
+func (s *AuthService) ListUsers() ([]*models.User, error) {
+	return s.userRepo.List()
+}
+
 func (s *AuthService) UpdateProfile(userID, name string) error {
 	return s.userRepo.Update(userID, name)
 }

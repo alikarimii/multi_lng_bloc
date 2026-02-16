@@ -43,5 +43,12 @@
   "arabic": "العربية",
 
   "developmentMode": "حالت توسعه",
-  "cancel": "لغو"
+  "cancel": "لغو",
+
+    "profileTitleMy": "پروفایل من",
+    "profileTitle": "پروفایل",
+    "usersTitle": "کاربران",
+    "unnamedUser": "کاربر بدون نام",
+    "joinedOn": "عضویت: {date}",
+    "noUsersFound": "کاربری یافت نشد"
 }

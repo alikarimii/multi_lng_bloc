@@ -43,5 +43,12 @@
   "arabic": "العربية",
 
   "developmentMode": "وضع التطوير",
-  "cancel": "إلغاء"
+  "cancel": "إلغاء",
+
+  "profileTitleMy": "ملفي الشخصي",
+  "profileTitle": "الملف الشخصي",
+  "usersTitle": "المستخدمون",
+  "unnamedUser": "مستخدم بدون اسم",
+  "joinedOn": "انضم: {date}",
+  "noUsersFound": "لا يوجد مستخدمون"
 }

@@ -264,6 +264,42 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settings;
 
+  /// Title for the current user's profile page
+  ///
+  /// In en, this message translates to:
+  /// **'My Profile'**
+  String get profileTitleMy;
+
+  /// Title for another user's profile page
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profileTitle;
+
+  /// Section header for the users list
+  ///
+  /// In en, this message translates to:
+  /// **'Users'**
+  String get usersTitle;
+
+  /// Fallback label when user has no name
+  ///
+  /// In en, this message translates to:
+  /// **'Unnamed User'**
+  String get unnamedUser;
+
+  /// Label for the date a user joined
+  ///
+  /// In en, this message translates to:
+  /// **'Joined: {date}'**
+  String joinedOn(String date);
+
+  /// Empty state when there are no users
+  ///
+  /// In en, this message translates to:
+  /// **'No users found'**
+  String get noUsersFound;
+
   /// Language section header in settings
   ///
   /// In en, this message translates to:
