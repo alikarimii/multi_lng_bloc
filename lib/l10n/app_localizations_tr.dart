@@ -91,6 +91,26 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settings => 'Ayarlar';
 
   @override
+  String get profileTitleMy => 'Profilim';
+
+  @override
+  String get profileTitle => 'Profil';
+
+  @override
+  String get usersTitle => 'Kullanicilar';
+
+  @override
+  String get unnamedUser => 'Isimsiz Kullanici';
+
+  @override
+  String joinedOn(String date) {
+    return 'Katilim: $date';
+  }
+
+  @override
+  String get noUsersFound => 'Kullanici bulunamadi';
+
+  @override
   String get language => 'Dil';
 
   @override

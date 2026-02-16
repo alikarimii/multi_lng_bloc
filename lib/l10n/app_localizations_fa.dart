@@ -91,6 +91,26 @@ class AppLocalizationsFa extends AppLocalizations {
   String get settings => 'تنظیمات';
 
   @override
+  String get profileTitleMy => 'پروفایل من';
+
+  @override
+  String get profileTitle => 'پروفایل';
+
+  @override
+  String get usersTitle => 'کاربران';
+
+  @override
+  String get unnamedUser => 'کاربر بدون نام';
+
+  @override
+  String joinedOn(String date) {
+    return 'عضویت: $date';
+  }
+
+  @override
+  String get noUsersFound => 'کاربری یافت نشد';
+
+  @override
   String get language => 'زبان';
 
   @override

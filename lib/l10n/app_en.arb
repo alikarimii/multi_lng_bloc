@@ -82,6 +82,31 @@
   "settings": "Settings",
   "@settings": { "description": "Settings page title" },
 
+  "profileTitleMy": "My Profile",
+  "@profileTitleMy": { "description": "Title for the current user's profile page" },
+
+  "profileTitle": "Profile",
+  "@profileTitle": { "description": "Title for another user's profile page" },
+
+  "usersTitle": "Users",
+  "@usersTitle": { "description": "Section header for the users list" },
+
+  "unnamedUser": "Unnamed User",
+  "@unnamedUser": { "description": "Fallback label when user has no name" },
+
+  "joinedOn": "Joined: {date}",
+  "@joinedOn": {
+    "description": "Label for the date a user joined",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+
+  "noUsersFound": "No users found",
+  "@noUsersFound": { "description": "Empty state when there are no users" },
+
   "language": "Language",
   "@language": { "description": "Language section header in settings" },
 
