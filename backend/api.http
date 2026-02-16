@@ -1,0 +1,231 @@
+### Multi Language Bloc API - Sample Requests
+### Use with VSCode REST Client extension or as reference for Postman/Insomnia
+
+@baseUrl = http://localhost:8080
+@authServiceUrl = http://localhost:8081
+
+### Variables (update after registration/login)
+@accessToken = your-access-token-here
+@refreshToken = your-refresh-token-here
+@email = test@example.com
+@password = password123
+
+### ============================================
+### Health Checks
+### ============================================
+
+### Gateway Health Check
+GET {{baseUrl}}/health
+Content-Type: application/json
+
+###
+
+### Auth Service Health Check
+GET {{authServiceUrl}}/health
+Content-Type: application/json
+
+### ============================================
+### Authentication - Public Routes
+### ============================================
+
+### Register New User
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}",
+  "name": "Test User"
+}
+
+###
+
+### Login
+POST {{baseUrl}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+###
+
+### Refresh Access Token
+POST {{baseUrl}}/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+  "refresh_token": "{{refreshToken}}"
+}
+
+###
+
+### Forgot Password
+POST {{baseUrl}}/api/v1/auth/forgot-password
+Content-Type: application/json
+
+{
+  "email": "{{email}}"
+}
+
+### ============================================
+### User Profile - Protected Routes
+### ============================================
+
+### Get User Profile
+GET {{baseUrl}}/api/v1/user/profile
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+
+### Update User Profile
+PUT {{baseUrl}}/api/v1/user/profile
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "name": "Updated Name"
+}
+
+###
+
+### Get User Usage Statistics
+GET {{baseUrl}}/api/v1/user/usage
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+###
+
+### Delete User Account
+DELETE {{baseUrl}}/api/v1/auth/account
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+### ============================================
+### Error Testing
+### ============================================
+
+### Test Invalid Credentials
+POST {{baseUrl}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "wrong@example.com",
+  "password": "wrongpassword"
+}
+
+###
+
+### Test Unauthorized Access (No Token)
+GET {{baseUrl}}/api/v1/user/profile
+Content-Type: application/json
+
+###
+
+### Test Invalid Token
+GET {{baseUrl}}/api/v1/user/profile
+Content-Type: application/json
+Authorization: Bearer invalid-token-12345
+
+###
+
+### Test Rate Limiting (Run this multiple times quickly)
+GET {{baseUrl}}/health
+Content-Type: application/json
+
+###
+
+### Test Validation - Missing Fields
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "email": "user@example.com"
+}
+
+###
+
+### Test Validation - Short Password
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "123",
+  "name": "Test"
+}
+
+###
+
+### Test Duplicate Email
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}",
+  "name": "Duplicate User"
+}
+
+### ============================================
+### Complete Registration and Login Flow
+### ============================================
+
+### 1. Register
+# @name register
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "email": "flow-test@example.com",
+  "password": "password123",
+  "name": "Flow Test User"
+}
+
+###
+
+### 2. Extract tokens from response and get profile
+# @name getProfile
+GET {{baseUrl}}/api/v1/user/profile
+Content-Type: application/json
+Authorization: Bearer {{register.response.body.access_token}}
+
+###
+
+### 3. Update profile
+# @name updateProfile
+PUT {{baseUrl}}/api/v1/user/profile
+Content-Type: application/json
+Authorization: Bearer {{register.response.body.access_token}}
+
+{
+  "name": "Updated Flow Test User"
+}
+
+###
+
+### 4. Get usage
+# @name getUsage
+GET {{baseUrl}}/api/v1/user/usage
+Content-Type: application/json
+Authorization: Bearer {{register.response.body.access_token}}
+
+###
+
+### 5. Refresh token
+# @name refreshToken
+POST {{baseUrl}}/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+  "refresh_token": "{{register.response.body.refresh_token}}"
+}
+
+###
+
+### 6. Delete account (final step)
+DELETE {{baseUrl}}/api/v1/auth/account
+Content-Type: application/json
+Authorization: Bearer {{register.response.body.access_token}}
